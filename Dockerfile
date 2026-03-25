@@ -1,5 +1,5 @@
-FROM tomcat:9
+FROM eclipse-temurin:21-jdk-jammy
 
-COPY target/*.war /usr/local/tomcat/webapps/
+COPY target/demo-app-1.0-SNAPSHOT.jar app.jar
 
-EXPOSE 8080
+CMD ["java", "-jar", "app.jar"]
